@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- В данном теге дополнительно подключаем файл со стилями, фавикон, прописываем название странички на вкладке браузера, подключаем файл со скриптами -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+        <title>Violetta Yakovleva</title>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <!-- В теле создаем тег хедер, в котором мы создаем навигацию - слева иконку и название страницы, справа - прописываем ссылки навигации по странице между разделами и кнопку для подписки на блог(никуда не ведет), при этом присваеваем классы -->
+        <header class="header">
+            <nav class="navigation box">
+                <div class="navigation__left">
+                    <img src="./img/logo-main.png" alt="Main logo" />
+                    <h1>Мой Блог</h1>
+                </div>
+                <div class="navigation__right">
+                    <!-- Дополнительно проставлены ссылки через id для дополнительной навигации по странице -->
+                    <a class="navigation__right-link" href="#">Главная</a>
+                    <a class="navigation__right-link" href="#blog">Блог</a>
+                    <a class="navigation__right-link" href="#my-contacts"
+                        >Контакты</a
+                    >
+                    <button class="navigation__btn">Подписаться</button>
+                </div>
+            </nav>
+        </header>
+        <!-- В теле создаем следующий тег - мейн, в котором будет содержаться основной контент страницы - блок "обо мне", блок "Мои посты", блок "мои контакты" -->
+        <main class="main">
+            <section class="about-me box">
+                <img
+                    class="about-me__img"
+                    src="./img/my-photo.jpg"
+                    alt="My photo"
+                />
+                <div class="about-me__content">
+                    <h1 class="about-me__h1">
+                        Всем привет! <br />
+                        Меня зовут Виолетта! <br />
+                        Добро пожаловать в мой Блог!
+                    </h1>
+                    <h2 class="about-me__h2">
+                        Эта страничка создана в рамках тестового задания, она
+                        расскажет Вам немного обо мне, и позволит Вам оценить
+                        мои навыки!
+                    </h2>
+                    <form
+                        action="https://github.com/Violetta-Yakovleva/WebDev_test"
+                        target="_blank"
+                    >
+                        <button class="about-me__btn">
+                            Посмотреть код страницы
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <section class="posts box" id="blog">
+                <h1>МОИ ПУБЛИКАЦИИ</h1>
+                <div class="post-content">
+                    <img
+                        class="post-content__img"
+                        src="./img/photo-post3.jpeg"
+                        alt="Travel photo"
+                    />
+                    <div class="post-content__post-text">
+                        <h3 class="post-content__category">#My_way</h3>
+                        <h2 class="post-content__title">Почему я здесь</h2>
+                        <p class="post-content__text">
+                            Меня давно уже тянуло в сферу IT, поэтому я
+                            (ничегошеньки не зная об IT и какое направление мне
+                            выбрать) решила <span id="dots3"> ... </span>
+                            <span id="more3"
+                                >пойти на курсы, чтобы понять, мое ли это
+                                вообще. <br />
+                                С февраля прошлого года обучаюсь на платфоме
+                                GeekBrains, на факультете "Разработчик", и все
+                                оказалось дико новым и интересным! Там мы
+                                касаемся многих тем, изучаем кучу предметов -
+                                лекций и живых практик с преподавателями, у нас
+                                сформировалась отличная группа, в которой мы
+                                друг другу готовы помочь в сложных случаях.
+                                <br />
+                                Но, как оказалось, основной блок растянут на 9
+                                месяцев обучения из 12... Когда у меня начались
+                                предметы, которые касаются веб-разработки и
+                                верстки, то я поняла, в каком направлении лежит
+                                моя душа. Но более глубокое погружение в
+                                пнравившееся направление ждет меня лишь в
+                                последние 3 месяца обучения, а учиться и
+                                практиковаться хочется уже сейчас! <br />
+                                Увидев в Инстаграмме пост о наборе на учебу, я
+                                отправила заявку на отброр в GigaSchool, и вот!
+                                Я здесь! <br />
+                                Очень интересно попробовать свои силы и учиться
+                                новому в формате оффлайн, обзавестись комьюнити
+                                в своем же городе и общаться с преподавателями в
+                                живую! А возможная стажировка после обучения
+                                выглядит очень привлекательно :)
+                            </span>
+                        </p>
+                        <button id="btn3" onclick="readMore3()">
+                            Читать далее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="post-content">
+                    <img
+                        class="post-content__img"
+                        src="./img/photo-post1.jpg"
+                        alt="Travel photo"
+                    />
+                    <div class="post-content__post-text">
+                        <h3 class="post-content__category">#Travel</h3>
+                        <h2 class="post-content__title">
+                            Как мы покоряли Северный Кавказ или "путешествие
+                            длиною в 40 отелей"
+                        </h2>
+                        <p class="post-content__text">
+                            И вот весной 2020 года я уволилась с государственной
+                            службы и оказалась в свободном
+                            <span id="dots1"> ... </span>
+                            <span id="more1"
+                                >плаванье. Тогда, чтобы спастись от "тяжелого"
+                                осадка от любимой работы и нелюбимого бывшего
+                                руководства, мы решили отправиться с мужем в
+                                большое путешествие. <br />
+                                за полтора месяца наших покатушек (а ведь мы
+                                колесили страну на своей машине) мы посетили:
+                                Крым, Сочи и Абхазию, Адыгею,
+                                Карачаево-Черкесскую Республику,
+                                Кабардино-Балкарскую Республику, Северую Осетию,
+                                Чеченскую Республику, Республику Ингушения,
+                                Республику Дагестан, Калмыкию... <br />
+                                Мы видели величественный Эльбрус и гуляли по
+                                приэльбрусью! <br />
+                                Мы видели горы Домбая! И вдохновились его
+                                снежными острыми пиками! <br />
+                                Мы видели столько всего! <br />
+                                Вывод: если стоит выбор, куда отправиться - море
+                                или горы? Бессомнения мы выберем ГОРЫ!
+                            </span>
+                        </p>
+                        <button id="btn1" onclick="readMore1()">
+                            Читать далее
+                        </button>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <img
+                        class="post-content__img"
+                        src="./img/photo-post2.jpg"
+                        alt="Travel photo"
+                    />
+                    <div class="post-content__post-text">
+                        <h3 class="post-content__category">#My_family</h3>
+                        <h2 class="post-content__title">
+                            В нашей жизни появилось рыжее чудо!
+                        </h2>
+                        <p class="post-content__text">
+                            В моей семье всегда были собаки. Сначала черный
+                            пудель Ричард, который прожил 17 лет, а затем
+                            <span id="dots2"> ... </span>
+                            <span id="more2">
+                                появился рыжий Брюс, той же породы. Я всегда
+                                была неравнодушна к этим животным и хотела
+                                своего компаньона.
+                                <br />
+                                Начав самостоятельную жизнь, я мечтала
+                                возвращаться не в пустую квартиру, а с тем самым
+                                лучшим другом.
+                                <br />
+                                Моя мечта сбылась в 2022 году. Муж увидел
+                                объявление о продаже щенка той пуделя и все
+                                закрутилось так быстро, до сих пор как в
+                                тумане... И вот, уже больше года мы растим
+                                нашего друга, и счастью нет предела!
+                                Оказывается, все совсем не страшно, и в ответ за
+                                заботу мы получаем прекрасные эмоции и любовь!
+                                <br />
+                                Вывод: если что-то очень хочется, то нужно
+                                дерзать!
+                                <br />
+                                пс: ну, конечно, если вы к этому готовы :D</span
+                            >
+                        </p>
+                        <button id="btn2" onclick="readMore2()">
+                            Читать далее
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts box" id="my-contacts">
+                <!-- В конактах ссылки сделаны тыкабельными и открываются в соседнем окне -->
+                <div class="contacts__link">
+                    <a href="https://t.me/vilka2020" target="_blank"
+                        ><img
+                            src="./img/logo-telegramm.svg"
+                            alt="Telegramm logo"
+                    /></a>
+                </div>
+                <div class="contacts__link">
+                    <a href="https://vk.com/lys.viol" target="_blank"
+                        ><img src="./img/logo-vk.svg" alt="VK logo"
+                    /></a>
+                </div>
+                <div class="contacts__link">
+                    <a href="mailto:lysova-violetta@mail.ru"
+                        ><img src="./img/logo-email.svg" alt="Email logo"
+                    /></a>
+                </div>
+                <div class="contacts__link-tel">
+                    <img src="./img/logo-telephone.svg" alt="Telephone logo" />
+                    <h3>+7-919-336-56-89</h3>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,247 @@
+/* Скачала и подкючила понравившийся шрифт */
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('./fonts/Montserrat-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('./fonts/Montserrat-SemiBold.ttf');
+}
+
+/* Сделала обнуление автоматических настроек */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat-Regular';
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+header {
+    background-color: #1b2d53;
+    color: white;
+    height: 90px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.navigation__left {
+    display: flex;
+    gap: 20px;
+    font-family: 'Montserrat-Bold';
+    font-size: 24px;
+}
+
+.navigation__left img {
+    height: 45px;
+}
+
+.navigation__right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.navigation__right-link {
+    color: white;
+    font-size: 24px;
+}
+
+.navigation__btn {
+    width: 130px;
+    height: 40px;
+    color: #1b2d53;
+    border-radius: 15px;
+    border: none;
+    background: #f8c77f;
+    cursor: pointer;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 16px;
+}
+
+
+.about-me {
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #F4F0F8;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-me__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 25px;
+}
+
+.about-me__img {
+    max-height: 450px;
+    border-radius: 15px;
+}
+
+.about-me__h1 {
+    font-family: 'Montserrat-SemiBold';
+    font-size: 50px;
+    font-weight: 700;
+    max-width: 650px;
+}
+
+.about-me__h2 {
+    color: #6D6E76;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+.about-me__btn {
+    font-family: 'Montserrat-Bold';
+    width: 150px;
+    height: 60px;
+    color: #1b2d53;
+    border-radius: 15px;
+    border: 1px solid #c1c1cc;
+    background: #daeaf4;
+    cursor: pointer;
+}
+
+.posts {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 65px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding: 50px 0;
+}
+
+/* редактирование абзаца, который не имеет класс */
+.posts h1 {
+    font-family: 'Montserrat-Bold';
+    font-size: 30px;
+    text-align: center;
+}
+.post-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+    gap: 64px;
+    background: fixed;
+}
+
+.post-content__img {
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.post-content__post-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.post-content__category {
+    color: #6D6E76;
+    font-size: 16px;
+}
+
+.post-content__title {
+    font-family: 'Montserrat-Bold';
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.post-content__text {
+    font-family: 'Montserrat-Italic';
+    font-size: 15px;
+    color: #6D6E76;
+    max-width: 500px;
+}
+
+/* редактирование элементов по id */
+
+#more1,
+#more2,
+#more3 {
+    display: none;
+}
+
+#btn1,
+#btn2,
+#btn3 {
+    font-family: 'Montserrat-Bold';
+    width: 140px;
+    height: 40px;
+    color: #1b2d53;
+    border-radius: 15px;
+    border: 1px solid #c1c1cc;
+    background: #daeaf4;
+    cursor: pointer;
+}
+
+.contacts {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F4F0F8;
+}
+
+.contacts__link {
+    display: grid;
+    grid-template-rows: 1fr;
+
+}
+
+.contacts__link-tel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+
+/* при позиционировании элементов использовала и grid, и flex */
